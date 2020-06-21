@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CalculatorWithPicture</string>
+    <string name="EdTxt">Введите название картинки</string>
+</resources>
