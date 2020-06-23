@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private String namePicture;
 
-    public static final int REQUEST_CODE_PERMISSION_WRITE_STORAGE = 100;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +42,6 @@ public class MainActivity extends AppCompatActivity {
                     namePicture);
             Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
             imageView.setImageBitmap(bitmap);
-        }
-
-        int permissionStatus = ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-
-        if (permissionStatus != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    REQUEST_CODE_PERMISSION_WRITE_STORAGE
-            );
         }
 
     }
